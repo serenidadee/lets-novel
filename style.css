@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #3D3B40;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;;
+    display: flex;
+    justify-content: center;
+    background-color: #525CEB;
+    box-shadow: 1px 3px 31px 1px #000000;
+}
+
+.menu {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: #fff;   
+    padding: 10px 20px;
+}
+
+.active {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background 1s;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.active:hover, .active:focus{
+    background-color: #fff;
+}
+
+.active:hover > a {
+    color: #3D3B40;
+}
+
+.card {
+    color: #fff;
+    width: 250px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.card-img {
+    border-radius: 20px;
+}
+
+.card-description {
+    font-size: 15px;
+}
+
+.btn-card {
+    margin-top: 10px;
+    border: 1px solid #525CEB;
+    border-radius: 30px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    transition: background 1s;
+}
+
+.btn-card:hover, .btn-card:focus {
+    background-color: #525CEB;
+} 
+
+.container-card {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.popular {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.popular-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+}
+
+.popular-title > i {
+    font-size: 50px;
+}
+
+.rodape {
+    background-color: #525CEB;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.tag-br {
+    border: 1px solid #3cad47;
+    color: #3cad47;
+    border-radius: 30px;
+    background-color: transparent;
+    padding: 5px 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    table-layout: fixed;
+    margin-top: 50px;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  table tr {
+    background-color: #2e2c30;
+    border: 1px solid #969696;
+    padding: .35em;
+    color: #fff;
+    font-weight: 900;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: #525CEB;
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+      width: 100%;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+@media (max-width: 800px) {
+    .container-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .popular {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar {
+        background-image: none;
+    }
+}
